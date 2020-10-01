@@ -12,7 +12,8 @@ use lm3s6965::Interrupt;
 use panic_semihosting as _;
 
 #[rtic::app(device = lm3s6965)]
-const APP: () = {
+mod app {
+    #[resources]
     struct Resources {
         // An early resource
         #[init(0)]
@@ -79,4 +80,4 @@ const APP: () = {
         hprintln!("UART1:l2 = {}", cx.resources.l2).unwrap();
         hprintln!("UART1:e1 = {}", cx.resources.e1).unwrap();
     }
-};
+}

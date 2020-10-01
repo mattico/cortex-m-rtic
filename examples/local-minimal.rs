@@ -8,7 +8,8 @@ use cortex_m_semihosting::{debug, hprintln};
 use panic_semihosting as _;
 
 #[rtic::app(device = lm3s6965)]
-const APP: () = {
+mod app {
+    #[resources]
     struct Resources {
         // A local (move), late resource
         #[task_local]
@@ -27,4 +28,4 @@ const APP: () = {
         debug::exit(debug::EXIT_SUCCESS);
         loop {}
     }
-};
+}

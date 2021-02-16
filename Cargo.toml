@@ -51,10 +51,9 @@ name = "types"
 required-features = ["__v7"]
 
 [dependencies]
-cortex-m = "0.6.2"
+cortex-m = "0.7.1"
 cortex-m-rtic-macros = { path = "macros", version = "0.5.2" }
-rtic-core = "0.3.0"
-cortex-m-rt = "0.6.9"
+rtic-core = "0.3.1"
 heapless = "0.5.0"
 
 [build-dependencies]
